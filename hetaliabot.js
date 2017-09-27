@@ -147,6 +147,12 @@ if (message.author.id === '258431184785113094' && message.content.includes ('dis
 });
 
 client.on("message", (message) => {
+if (message.author.id === '258431184785113094' && message.content.includes ('texas')) {
+    message.channel.send(":cowboy:");
+  }
+});
+
+client.on("message", (message) => {
 if (message.author.id === '258431184785113094' && message.content.includes ('sad')) {
     message.channel.send("I LOVE YOU SO MUCH AL AND I BELIEVE IN YOU!!!");
   }
