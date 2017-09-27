@@ -8,14 +8,12 @@ client.on("ready", () => {
 client.on("message", (message) => {
   if (message.content.startsWith("ping")) {
     message.channel.send("pong!");
+  }else if(message.content.startsWith("dong")){
+   message.channel.send("long :eyes:"); 
   }
 });
 
-client.on("message", (message) => {
-  if (message.content.startsWith("dong")) {
-    message.channel.send("long :eyes:");
-  }
-});
+
 
 client.on("message", (message) => {
 if (message.content.includes ('good morning')) {
