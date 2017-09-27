@@ -30,6 +30,24 @@ if (message.content.includes ('vore')) {
 });
 
 client.on("message", (message) => {
+if (message.content.includes ('sad')) {
+    message.channel.send("i love you!");
+  }
+});
+
+client.on("message", (message) => {
+if (message.content.includes ('depressed')) {
+    message.channel.send("i love you!");
+  }
+});
+
+client.on("message", (message) => {
+if (message.content.includes ('joe')) {
+    message.channel.send(":eyes:");
+  }
+});
+
+client.on("message", (message) => {
 if (message.content.includes ('oliver')) {
     message.channel.send("<@264945356884672524>");
   }
