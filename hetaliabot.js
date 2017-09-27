@@ -24,6 +24,12 @@ client.on("message", (message) => {
 });
 
 client.on("message", (message) => {
+if (message.content.includes ('vore')) {
+    message.channel.send("***RAT JAIL*** @joe#7636");
+  }
+});
+
+client.on("message", (message) => {
 if (message.author.id === '258431184785113094' && message.content.includes ('gross')) {
     message.channel.send("I LOVE YOU SO MUCH AL AND I BELIEVE IN YOU!!!");
   }
