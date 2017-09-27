@@ -37,7 +37,7 @@ if (message.content.includes ('sad')) {
 
 client.on("message", (message) => {
   if (message.content.startsWith("*shrugs*")) {
-    message.channel.send(" ¯\_(ツ)_/¯ ");
+    message.channel.send(" ¯\\_(ツ)_/¯ ");
   }
 });
 
