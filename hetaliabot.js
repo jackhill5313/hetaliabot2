@@ -87,14 +87,7 @@ if (message.content.includes ('nazi')) {
 
 client.on("message", (message) => {
 if (message.content.includes ('good morning')) {
-    message.channel.send("^v^  ^v^  ^v^  ^v^  ^v^  ^v^  ^v^  ^v^  ^v^  ^v^
-┈┈┈┈┈╭̸╮̸┈┈┈┈┈╱▔▔▔╲
-┈┈┈▕▔▔▔▔▏╱╲╱┈Good`  ▕
-┈┈┈┏▏▉▕▊┓▔╲╱'Morning'╱
-┈┈┈┗▏▅▅▕┛┈┈┈┈▔▔┈
-┈╱▔▔▔▔▔▔▔▔╲┈▕▔▏┈
-╱╱▔▏┏┳┳┓▕▔╲╲╱╱┈┈
-╲╲▕┓┗▅▅┛┏▏┈╲╱┈┈┈");
+    message.channel.send("");
   }
 });
 
@@ -103,6 +96,13 @@ if (message.author.id !== '264945356884672524' && message.content.includes ('all
     message.channel.send("<@264945356884672524>");
   }
 });
+
+client.on("message", (message) => {
+if (message.author.id !== '264945356884672524' && message.content.includes ('allan')) {
+    message.channel.send("<3", {
+    file: "https://cdn.discordapp.com/attachments/319664383926206464/362643551151980544/allanface4.png" // Or replace with FileOptions object
+});
+
 
 client.on("message", (message) => {
 if (message.content.includes ('good boi') && message.content.includes ('al')) {
