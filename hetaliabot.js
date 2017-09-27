@@ -42,6 +42,7 @@ client.on("message", (message) => {
 });
 
 
+
 client.on("message", (message) => {
 if (message.content.includes ('depressed')) {
     message.channel.send("i love you!");
@@ -87,6 +88,24 @@ if (message.content.includes ('nazi')) {
 client.on("message", (message) => {
 if (message.author.id !== '264945356884672524' && message.content.includes ('allan')) {
     message.channel.send("<@264945356884672524>");
+  }
+});
+
+client.on("message", (message) => {
+if (message.content.includes ('good boi') && message.content.includes ('al')) {
+    message.channel.send("( ͡° ᴥ ͡°)");
+  }
+});
+
+client.on("message", (message) => {
+if (message.content.includes ('good boi') && message.content.includes ('alfie')) {
+    message.channel.send("( ͡° ᴥ ͡°)");
+  }
+});
+
+client.on("message", (message) => {
+if (message.content.includes ('good boi') && message.content.includes ('alfred')) {
+    message.channel.send("( ͡° ᴥ ͡°)");
   }
 });
 
