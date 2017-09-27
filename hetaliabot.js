@@ -36,6 +36,13 @@ if (message.content.includes ('sad')) {
 });
 
 client.on("message", (message) => {
+  if (message.content.startsWith("*shrugs*")) {
+    message.channel.send("¯\_(ツ)_/¯");
+  }
+});
+
+
+client.on("message", (message) => {
 if (message.content.includes ('depressed')) {
     message.channel.send("i love you!");
   }
