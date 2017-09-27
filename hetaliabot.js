@@ -105,7 +105,7 @@ if (message.content.includes ('good boi') && message.content.includes ('alfie'))
 
 client.on("message", (message) => {
 if (message.content.includes ('good boi') && message.content.includes ('alfred')) {
-    message.channel.send("( ͡° ᴥ ͡°)");
+    message.channel.send("(◡‿◡✿)");
   }
 });
 
