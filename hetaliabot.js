@@ -97,12 +97,6 @@ if (message.author.id !== '264945356884672524' && message.content.includes ('all
   }
 });
 
-client.on("message", (message) => {
-if (message.content.includes ('good morning')) {
-    message.channel.send("<3", {
-    file: "https://cdn.discordapp.com/attachments/319664383926206464/362643551151980544/allanface4.png"
-});
-
 
 client.on("message", (message) => {
 if (message.content.includes ('good boi') && message.content.includes ('al')) {
