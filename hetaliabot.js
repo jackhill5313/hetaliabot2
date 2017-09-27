@@ -30,6 +30,30 @@ if (message.content.includes ('vore')) {
 });
 
 client.on("message", (message) => {
+if (message.content.includes ('hitler')) {
+    message.channel.send("<@264945356884672524>");
+  }
+});
+
+client.on("message", (message) => {
+if (message.content.includes ('nazi')) {
+    message.channel.send("<@264945356884672524>");
+  }
+});
+
+client.on("message", (message) => {
+if (message.content.includes ('allan')) {
+    message.channel.send("<@264945356884672524>");
+  }
+});
+
+client.on("message", (message) => {
+if (message.content.includes ('veggie burgers')) {
+    message.channel.send("<@264945356884672524>");
+  }
+});
+
+client.on("message", (message) => {
 if (message.author.id === '258431184785113094' && message.content.includes ('gross')) {
     message.channel.send("I LOVE YOU SO MUCH AL AND I BELIEVE IN YOU!!!");
   }
