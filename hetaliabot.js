@@ -25,7 +25,7 @@ client.on("message", (message) => {
 
 client.on("message", (message) => {
 if (message.content.includes ('vore')) {
-    message.channel.send("***RAT JAIL*** ${264945356884672524}");
+    message.channel.send("***RAT JAIL*** <@264945356884672524>");
   }
 });
 
