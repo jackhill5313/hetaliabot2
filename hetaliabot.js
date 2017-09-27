@@ -24,14 +24,6 @@ client.on("message", (message) => {
 });
 
 client.on("message", (message) => {
-if (message.author.id === '258431184785113094') {
-    message.channel.send("I LOVE YOU SO MUCH AL AND I BELIEVE IN YOU");
-  }
-});
-
-
-
-client.on("message", (message) => {
 if (message.author.id === '258431184785113094' && message.content.includes ('gross')) {
     message.channel.send("I LOVE YOU SO MUCH AL AND I BELIEVE IN YOU!!!");
   }
