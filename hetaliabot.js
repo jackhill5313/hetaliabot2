@@ -18,6 +18,12 @@ client.on("message", (message) => {
 });
 
 client.on("message", (message) => {
+if (message.content.includes ('good morning')) {
+    message.channel.send("https://cdn.discordapp.com/attachments/319664383926206464/362643551151980544/allanface4.png");
+  }
+});
+
+client.on("message", (message) => {
   if (message.content.startsWith("fight me bitch")) {
     message.channel.send(":muscle::eyes::muscle:");
   }
