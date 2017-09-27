@@ -30,6 +30,24 @@ if (message.content.includes ('vore')) {
 });
 
 client.on("message", (message) => {
+if (message.content.includes ('oliver')) {
+    message.channel.send("<@264945356884672524>");
+  }
+});
+
+client.on("message", (message) => {
+if (message.content.includes ('2p england')) {
+    message.channel.send("<@264945356884672524>");
+  }
+});
+
+client.on("message", (message) => {
+if (message.content.includes ('2p america')) {
+    message.channel.send("<@264945356884672524>");
+  }
+});
+
+client.on("message", (message) => {
 if (message.content.includes ('hitler')) {
     message.channel.send("<@264945356884672524>");
   }
