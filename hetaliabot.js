@@ -39,6 +39,12 @@ client.on("message", (message) => {
   }
 });
 
+client.on("message", (message) => {
+if (message.content.includes ('asl')) {
+    message.channel.send("241/Country/USA");
+  }
+});
+
 
 
 client.on("message", (message) => {
