@@ -203,34 +203,6 @@ client.on('message', message =>{
 		var choices = ['rock','paper','scissors'];
 		var response = choices[Math.floor(Math.random()*3)];
 		message.channel.send('I chose '+response);
-		if(userResponse == 'paper'){
-			if(response == 'rock'){
-				message.channel.send('You won :(');
-				userWins = true;
-			}else if(response == 'scissors'){
-				message.channel.send('KATTA');
-			}else{
-				message.channel.send('There was a tie');
-			}
-		}
-		if(userResponse == 'rock'){
-			if(response == 'scissors'){
-				message.channel.send('You won :(');
-				userWins = true;
-			}else if(response == 'paper'){
-				message.channel.send('KATTA');
-			}else{
-				message.channel.send('There was a tie');
-			}
-		}
-		if(userResponse == 'scissor' || userResponse == 'scissors'){
-			if(response == 'paper'){
-				message.channel.send('You won :(');
-				userWins = true;
-			}else if(response == 'rock'){
-				message.channel.send('KATTA');
-			}else{
-				message.channel.send('There was a tie');
 			}
 });
 
