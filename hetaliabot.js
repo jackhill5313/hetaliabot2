@@ -199,16 +199,8 @@ if (message.author.id === '258431184785113094' && message.content.includes ('can
 });
 
 client.on('message', message =>{
-	if (message.content.substring(0, 1) == '?') {
-        var args = message.content.substring(1).split(' ');
-        var cmd = args[0];
-		args = args.splice(1);
-	}
-	
-	if(cmd.toLowerCase() === 'rock' || cmd.toLowerCase() === 'paper' || cmd.toLowerCase() === 'scissors' || cmd.toLowerCase() === 'scissor'){
+	if (message.content.includes ('rock paper scissors')) {
 		var choices = ['rock','paper','scissors'];
-		var userResponse = cmd.toLowerCase();
-		var userWins = false;
 		var response = choices[Math.floor(Math.random()*3)];
 		message.channel.send('I chose '+response);
 		if(userResponse == 'paper'){
