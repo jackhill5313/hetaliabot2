@@ -16,25 +16,6 @@ client.on("message", (message) => {
   }
 });
 
-client.on("message", (message) => {
-  if (message.content.includes("rock paper scissors")) {
-    var pc = Math.round(Math.random() * (4 - 1));
-    if(pc === 0) pc++
-    var user = 0
-    let checker = changeCase.upperCase(args);
-    if(!checker) return message.reply("No option picked, you lose");
-    if(checker === "ROCK") user = 1;
-    if(checker === "PAPER") user = 2;
-    if(checker === "SCISSORS") user = 3;
-    if(user === pc) return message.reply("You Tied!")
-    if(user === 1 && pc === 2) return message.reply("You Lost, Rock vs Paper")
-    if(user === 2 && pc === 3) return message.reply("You Lost, Paper vs Scissors")
-    if(user === 3 && pc === 1) return message.reply("You Lost, Scissors vs Rock")
-    if(pc === 1 && user === 2) return message.reply("You Won, Paper vs Rock")
-    if(pc === 2 && user === 3) return message.reply("You Won, Scissors vs Paper")
-    if(pc === 3 && user === 1) return message.reply("You Won, Rock vs Scissors")
-  }
-});
 
 
 
@@ -216,5 +197,27 @@ if (message.author.id === '258431184785113094' && message.content.includes ('can
     message.channel.send("I LOVE YOU SO MUCH AL AND I BELIEVE IN YOU!!!");
   }
 });
+
+client.on('message', message =>{
+  let command = changeCase.upperCase(message.content.split(' ')[0]);
+  let args = message.content.split(' ').slice(1);
+  
+ if(command === ("RPS")){
+    var pc = Math.round(Math.random() * (4 - 1));
+    if(pc === 0) pc++
+    var user = 0
+    let checker = changeCase.upperCase(args);
+    if(!checker) return message.reply("No option picked, you lose");
+    if(checker === "ROCK") user = 1;
+    if(checker === "PAPER") user = 2;
+    if(checker === "SCISSORS") user = 3;
+    if(user === pc) return message.reply("You Tied!")
+    if(user === 1 && pc === 2) return message.reply("You Lost, Rock vs Paper")
+    if(user === 2 && pc === 3) return message.reply("You Lost, Paper vs Scissors")
+    if(user === 3 && pc === 1) return message.reply("You Lost, Scissors vs Rock")
+    if(pc === 1 && user === 2) return message.reply("You Won, Paper vs Rock")
+    if(pc === 2 && user === 3) return message.reply("You Won, Scissors vs Paper")
+    if(pc === 3 && user === 1) return message.reply("You Won, Rock vs Scissors")
+  }
 
 client.login("MzYyMjk4MTcyNzU3NzcwMjUz.DKwoDw.Ta-39UJ9Cyr-bZ5GjrtOCP4VvPI");
