@@ -5,6 +5,17 @@ client.on("ready", () => {
   console.log("I am ready!");
 });
 
+ 
+
+
+client.on("message", (message) => {
+  if (message.content.startsWith("ping")) {
+    message.channel.send("pong!");
+  }else if(message.content.startsWith("dong")){
+   message.channel.send("long :eyes:"); 
+  }
+});
+
 client.on("message", (message) => {
   if (message.content.includes("rock paper scissors")) {
     var pc = Math.round(Math.random() * (4 - 1));
@@ -22,17 +33,6 @@ client.on("message", (message) => {
     if(pc === 1 && user === 2) return message.reply("You Won, Paper vs Rock")
     if(pc === 2 && user === 3) return message.reply("You Won, Scissors vs Paper")
     if(pc === 3 && user === 1) return message.reply("You Won, Rock vs Scissors")
-  }
- 
-
- 
-
-
-client.on("message", (message) => {
-  if (message.content.startsWith("ping")) {
-    message.channel.send("pong!");
-  }else if(message.content.startsWith("dong")){
-   message.channel.send("long :eyes:"); 
   }
 });
 
