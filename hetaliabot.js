@@ -239,6 +239,7 @@ client.on('message', message =>{
 				message.channel.send('KATTA');
 			}else{
 				message.channel.send('There was a tie');
+			}
 });
 
 client.login("MzYyMjk4MTcyNzU3NzcwMjUz.DKwoDw.Ta-39UJ9Cyr-bZ5GjrtOCP4VvPI");
