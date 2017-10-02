@@ -5,7 +5,24 @@ client.on("ready", () => {
   console.log("I am ready!");
 });
 
-
+client.on("message", (message) => {
+  if (message.content.includes("rock paper scissors")) {
+    var pc = Math.round(Math.random() * (4 - 1));
+    if(pc === 0) pc++
+    var user = 0
+    let checker = changeCase.upperCase(args);
+    if(!checker) return message.reply("No option picked, you lose");
+    if(checker === "ROCK") user = 1;
+    if(checker === "PAPER") user = 2;
+    if(checker === "SCISSORS") user = 3;
+    if(user === pc) return message.reply("You Tied!")
+    if(user === 1 && pc === 2) return message.reply("You Lost, Rock vs Paper")
+    if(user === 2 && pc === 3) return message.reply("You Lost, Paper vs Scissors")
+    if(user === 3 && pc === 1) return message.reply("You Lost, Scissors vs Rock")
+    if(pc === 1 && user === 2) return message.reply("You Won, Paper vs Rock")
+    if(pc === 2 && user === 3) return message.reply("You Won, Scissors vs Paper")
+    if(pc === 3 && user === 1) return message.reply("You Won, Rock vs Scissors")
+  }
  
 
  
