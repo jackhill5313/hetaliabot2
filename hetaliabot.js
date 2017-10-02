@@ -200,9 +200,7 @@ if (message.author.id === '258431184785113094' && message.content.includes ('can
 
 client.on('message', message =>{
   let command = changeCase.upperCase(message.content.split(' ')[0]);
-  let args = message.content.split(' ').slice(1);
-  
- if(command === ("RPS")){
+  if(command === ("RPS")){
     var pc = Math.round(Math.random() * (4 - 1));
     if(pc === 0) pc++
     var user = 0
