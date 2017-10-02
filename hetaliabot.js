@@ -5,6 +5,73 @@ client.on("ready", () => {
   console.log("I am ready!");
 });
 
+exports.run = (client, message, args) => {
+  let rps = ['rock','paper','scissors'];
+  let user = args.join(' ').toLowerCase();
+  if (user.length < 1) {
+    message.channel.sendMessage('Please enter rock, paper, or scissors!');
+  } else {
+    if (user == 'rock'||user == 'paper'||user == 'scissors') {
+      let bot = rps[Math.floor(Math.random() * rps.length)];
+      if (user == 'rock') {
+        if (bot == 'rock') {
+          message.channel.sendMessage('Rock. Tie!');
+          return;
+        } else if (bot == 'paper') {
+          message.channel.sendMessage('Paper. I win!');
+          return;
+        } else if (bot == 'scissors') {
+          message.channel.sendMessage('Scissors. You win!');
+          return;
+        };
+      };
+
+      if (user == 'paper') {
+        if (bot == 'rock') {
+          message.channel.sendMessage('Rock. You win!');
+          return;
+        } else if (bot == 'paper') {
+          message.channel.sendMessage('Paper. Tie!');
+          return;
+        } else if (bot == 'scissors') {
+          message.channel.sendMessage('Scissors. I win!');
+          return;
+        };
+      };
+
+      if (user == 'scissors') {
+        if (bot == 'rock') {
+          message.channel.sendMessage('Rock. I win!');
+          return;
+        } else if (bot == 'paper'){
+          message.channel.sendMessage('Paper. You win!');
+          return;
+        } else if (bot == 'scissors') {
+          message.channel.sendMessage('Scissors. Tie!');
+          return;
+        };
+      };
+
+    } else {
+      message.channel.sendMessage('Please enter rock, paper, or scissors!');
+    };
+  };
+};
+
+exports.conf = {
+  enabled: true,
+  guildOnly: false,
+  aliases: [],
+  permLevel: 0
+};
+
+exports.help = {
+  name: 'rps',
+  description: 'Play Rock, Paper, Scissors with Proteus!',
+  usage: 'rps <rock|paper|scissors>'
+};
+
+
 client.on("message", (message) => {
   if (message.content.startsWith("ping")) {
     message.channel.send("pong!");
