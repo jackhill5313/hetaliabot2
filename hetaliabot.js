@@ -202,7 +202,7 @@ client.on('message', message =>{
 	if (message.content.includes ('rock paper scissors')) {
 		var choices = ['rock','paper','scissors'];
 		var response = choices[Math.floor(Math.random()*3)];
-	 message.channel.send('I choose '+response' :heart:');
+	 message.channel.send('I choose '+response ':heart: !');
 	}
 });
 
