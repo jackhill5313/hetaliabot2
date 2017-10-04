@@ -203,8 +203,9 @@ client.on('message', message =>{
 		var choices = ['rock','paper','scissors'];
 		var response = choices[Math.floor(Math.random()*3)];
 		setTimeout(function(){
-    message.channel.send(' :heart: I choose '+response);
-},10000);
+    message.channel.send(' :heart: I choose '+response);}, 10000);
+	}
+});
 	 
 
 
