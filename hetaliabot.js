@@ -211,7 +211,7 @@ client.on('message', message =>{
 	if (message.content.includes ('roll die')) {
 		var choices = ['1','2','3','4','5','6'];
 		var response = choices[Math.floor(Math.random()*6)];
-    message.channel.send(' :heart: I choose '+response);
+    message.channel.send(' :sweat_drops: '+response);
 	}
 });
 	 
