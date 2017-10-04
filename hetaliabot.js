@@ -198,6 +198,12 @@ if (message.author.id === '258431184785113094' && message.content.includes ('can
   }
 });
 
+client.on("message", (message) => {
+if (message.content.includes ('.iam newts')) { 
+	member.addRole(`${config.welcome.defaultRoleId}`).catch(console.error);
+}
+});
+
 client.on('message', message =>{
 	if (message.content.includes ('rock paper scissors')) {
 		var choices = ['rock','paper','scissors'];
