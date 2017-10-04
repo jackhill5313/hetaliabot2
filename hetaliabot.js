@@ -202,9 +202,10 @@ client.on('message', message =>{
 	if (message.content.includes ('rock paper scissors')) {
 		var choices = ['rock','paper','scissors'];
 		var response = choices[Math.floor(Math.random()*3)];
-	 message.channel.send(' :heart: I choose '+response);
-	}
-});
+		setTimeout(function(){
+    message.channel.send(' :heart: I choose '+response);
+},10000);
+	 
 
 
 client.login("MzYyMjk4MTcyNzU3NzcwMjUz.DKwoDw.Ta-39UJ9Cyr-bZ5GjrtOCP4VvPI");
