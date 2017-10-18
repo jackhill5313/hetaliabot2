@@ -215,6 +215,14 @@ client.on('message', message =>{
     message.channel.send(' :sweat_drops:'+response);
 	}
 });
+
+client.on('message', message =>{
+	if (message.content.includes ('dnd20')) {
+		var choices = ['17','20','20','20','18','19'];
+		var response = choices[Math.floor(Math.random()*6)];
+    message.channel.send(' :sweat_drops:'+response);
+	}
+});
 	 
 
 
