@@ -218,8 +218,8 @@ client.on('message', message =>{
 
 client.on('message', message =>{
 	if (message.content.includes ('dnd20')) {
-		var choices = ['17','20','20','20','18','19'];
-		var response = choices[Math.floor(Math.random()*6)];
+		var choices = ['17','16','15','20','18','19','14','13','12','11','10','9','8','7','6','5','4','3','2','1'];
+		var response = choices[Math.floor(Math.random()*20)];
     message.channel.send(' :sweat_drops:'+response);
 	}
 });
