@@ -125,11 +125,6 @@ if (message.content.includes ('nazi')) {
   }
 });
 
-client.on("message", (message) => {
-if (message.content.includes ('good morning')) {
-    message.channel.send("");
-  }
-});
 
 client.on("message", (message) => {
 if (message.author.id !== '264945356884672524' && message.content.includes ('allan')) {
