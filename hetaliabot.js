@@ -212,7 +212,7 @@ client.on('message', message =>{
 });
 
 client.on('message', message =>{
-	if (message.content.includes ('1dnd20')) {
+	if (message.content.includes ('1dd20')) {
 		var choices = ['20','20','20','20','20','20'];
 		var response = choices[Math.floor(Math.random()*6)];
     message.channel.send(' :sweat_drops:'+response);
