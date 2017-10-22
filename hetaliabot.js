@@ -90,7 +90,7 @@ if (message.content.includes ('depressed')) {
 });
 
 client.on("message", (message) => {
-if (message.content.includes ('joe')) {
+if (message.author.id !== '264945356884672524' && message.content.includes ('joe')) {
     message.channel.send(":eyes:");
   }
 });
