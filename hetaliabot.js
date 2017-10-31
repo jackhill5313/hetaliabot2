@@ -220,7 +220,7 @@ client.on('message', message =>{
 });
 
 client.on('message', message =>{
-	if (message.content.includes ('1dnd20') && message.author.id === '264945356884672524') {
+	if (message.content.includes ('1dn20') && message.author.id === '264945356884672524') {
 		var choices = ['20','19','18','17','16','15','14','13','12'];
 		var response = choices[Math.floor(Math.random()*9)];
     message.channel.send(' :sweat_drops:'+response);
