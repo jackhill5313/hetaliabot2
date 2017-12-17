@@ -239,4 +239,4 @@ client.on('message', message =>{
 	 
 
 
-client.login("MzYyMjk4MTcyNzU3NzcwMjUz.DRemrw.i8iygUDd7fT2NLuwAKzOJX9ZRFI");
+client.login(process.env.FUCKYOUNAZIS);
