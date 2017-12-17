@@ -237,4 +237,4 @@ client.on('message', message =>{
 	 
 
 
-client.login("MzYyMjk4MTcyNzU3NzcwMjUz.DKwoDw.Ta-39UJ9Cyr-bZ5GjrtOCP4VvPI");
+client.login("FUCKYOUNAZIS");
