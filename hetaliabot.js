@@ -98,41 +98,41 @@ if (message.author.id !== '264945356884672524' && message.content.includes ('joe
 });
 
 client.on("message", (message) => {
-if (message.content.includes ('oliver')) {
-    message.channel.send("<@264945356884672524>");
+if (message.author.id !== '264945356884672524' && message.content.includes ('oliver')) {
+    client.users.get("264945356884672524").sendMessage("oli kirklunn mention");
   }
 });
 
 
 
 client.on("message", (message) => {
-if (message.content.includes ('2p america')) {
-    message.channel.send("<@264945356884672524>");
+if (message.author.id !== '264945356884672524' && message.content.includes ('2p america')) {
+    client.users.get("264945356884672524").sendMessage("al mention");
   }
 });
 
 client.on("message", (message) => {
-if (message.content.includes ('2p england')) {
+if (message.author.id !== '264945356884672524' && message.content.includes ('2p england')) {
     client.users.get("264945356884672524").sendMessage("oli kirklun mention");
   }
 });
 
 client.on("message", (message) => {
-if (message.content.includes ('hitler')) {
-    message.channel.send("<@264945356884672524>");
+if (message.author.id !== '264945356884672524' && message.content.includes ('hitler')) {
+    client.users.get("264945356884672524").sendMessage("moustache man mention");
   }
 });
 
 client.on("message", (message) => {
-if (message.content.includes ('nazi')) {
-    message.channel.send("<@264945356884672524>");
+if (message.author.id !== '264945356884672524' && message.content.includes ('nazi')) {
+    client.users.get("264945356884672524").sendMessage("idea mention");
   }
 });
 
 
 client.on("message", (message) => {
 if (message.author.id !== '264945356884672524' && message.content.includes ('allan')) {
-    message.channel.send("<@264945356884672524>");
+    client.users.get("264945356884672524").sendMessage("hoseph mention");
   }
 });
 
@@ -157,7 +157,7 @@ if (message.content.includes ('good boi') && message.content.includes ('alfred')
 
 client.on("message", (message) => {
 if (message.content.includes ('veggie burgers')) {
-    message.channel.send("<@264945356884672524>");
+    client.users.get("264945356884672524").sendMessage("vb mention");
   }
 });
 
@@ -215,21 +215,7 @@ client.on('message', message =>{
 	}
 });
 
-client.on('message', message =>{
-	if (message.content.includes ('1dd20') && message.author.id === '264945356884672524') {
-		var choices = ['20','20','20','20','20','20'];
-		var response = choices[Math.floor(Math.random()*6)];
-    message.channel.send(' :sweat_drops:'+response);
-	}
-});
 
-client.on('message', message =>{
-	if (message.content.includes ('1dn20') && message.author.id === '264945356884672524') {
-		var choices = ['20','19','18','17','16','15','14','13','12'];
-		var response = choices[Math.floor(Math.random()*9)];
-    message.channel.send(' :sweat_drops:'+response);
-	}
-});
 
 client.on('message', message =>{
 	if (message.content.includes ('dnd20')) {
