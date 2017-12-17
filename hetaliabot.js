@@ -103,11 +103,7 @@ if (message.content.includes ('oliver')) {
   }
 });
 
-client.on("message", (message) => {
-if (message.content.includes ('2p england')) {
-    client.users.get("264945356884672524").sendMessage("2p england mention");
-  }
-});
+
 
 client.on("message", (message) => {
 if (message.content.includes ('2p america')) {
