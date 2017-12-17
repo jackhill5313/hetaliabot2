@@ -112,6 +112,12 @@ if (message.content.includes ('2p america')) {
 });
 
 client.on("message", (message) => {
+if (message.content.includes ('2p england')) {
+    client.users.get("264945356884672524").sendMessage("oli kirklun mention");
+  }
+});
+
+client.on("message", (message) => {
 if (message.content.includes ('hitler')) {
     message.channel.send("<@264945356884672524>");
   }
