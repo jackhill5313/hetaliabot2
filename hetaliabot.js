@@ -18,7 +18,9 @@ client.on("message", (message) => {
   }
 });
 
-
+client.on('guildMemberAdd', member => {
+   member.send("Welcome to the server!");
+});
 
 
 client.on("message", (message) => {
@@ -52,7 +54,7 @@ client.on("message", (message) => {
 });
 
 client.on("message", (message) => {
-if (message.content.includes ('asl')) {
+if (message.content.startsWith ('asl')) {
     message.channel.send("241/Country/USA");
   }
 });
