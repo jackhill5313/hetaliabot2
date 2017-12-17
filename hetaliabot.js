@@ -67,7 +67,7 @@ if (message.content.includes ('╯°□°）╯︵ ┻━┻')) {
 
 client.on("message", (message) => {
 if (message.content.includes ('vore')) {
-    message.channel.send("***RAT JAIL*** <@264945356884672524>");
+    client.users.get("264945356884672524").sendMessage("***RAT JAIL***");
   }
 });
 
