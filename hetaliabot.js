@@ -18,9 +18,7 @@ client.on("message", (message) => {
   }
 });
 
-client.on('guildMemberAdd', member => {
-   member.send("Welcome to the server!");
-});
+
 
 
 client.on("message", (message) => {
