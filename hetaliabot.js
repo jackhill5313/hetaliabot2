@@ -88,23 +88,23 @@ client.on("message", (message) => {
 
 
 
-client.on('message', (message) => {
+client.on('message', async message => {
     if(message.content.includes ('hewwo')){
-async () => {
-    try  {
-        await message.react("413948959908823041");
-        await message.react("🇵");
-        await message.react("🇪");
-        await message.react("🇷");
-        await message.react("🇮");
-        await message.react("🇸");
-        await message.react("🇭");
-    } catch (err) {
-        console.log(err)
+	    try  {
+		    await message.react("413948959908823041");
+        	    await message.react("🇵");
+		    await message.react("🇪");
+		    await message.react("🇷");
+		    await message.react("🇮");
+		    await message.react("🇸");
+		    await message.react("🇭");
+	    } catch (error) {
+		    console.log(err)
     }
 };
 };
 });
+
 
 client.on("message", (message) => {
 if (message.content.includes ('depressed')) {
