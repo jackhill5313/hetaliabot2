@@ -8,7 +8,10 @@ client.on("ready", () => {
 });
 
  
-
+client.on("guildMemberAdd", (member) => {
+  console.log(`New User "${member.user.username}" has joined "${member.guild.name}"` );
+  member.guild.channels.get("rules_and_entry").send(`Welcome,"${member.user.username}"! Read the rules to enter! 💖`);
+});
 
 client.on("message", (message) => {
   if (message.content.startsWith("ping")) {
