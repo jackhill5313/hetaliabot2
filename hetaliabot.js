@@ -83,6 +83,11 @@ client.on("message", (message) => {
   }
 });
 
+client.on("message", (message) => {
+if (message.content.includes ('hewwo')) {
+    message.channel.send(":hell:");
+  }
+});
 
 
 client.on("message", (message) => {
@@ -174,7 +179,7 @@ if (message.author.id === '258431184785113094' && message.content.includes ('dis
 });
 
 client.on("message", (message) => {
-if (message.author.id === '258431184785113094' && message.content.includes ('texas')) {
+if (message.content.includes ('texas')) {
     message.channel.send(":cowboy:");
   }
 });
