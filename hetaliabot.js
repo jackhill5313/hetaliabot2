@@ -9,7 +9,6 @@ client.on("ready", () => {
 
 client.on('message', (message) => {
     if(message.content.includes ('hewwo')){
-async () => {
     try  {
         await message.react("413948959908823041");
         await message.react("🇵");
@@ -18,6 +17,8 @@ async () => {
         await message.react("🇮");
         await message.react("🇸");
         await message.react("🇭");
+    } catch (err) {
+        console.log(err)
     }
 };
 };
