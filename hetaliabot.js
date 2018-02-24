@@ -85,7 +85,13 @@ client.on("message", (message) => {
 
 client.on("message", (message) => {
 if (message.content.includes ('hewwo')) {
-    message.react("413948959908823041", "🇵", "🇪", "🇷", "🇮", "🇸", "🇭");
+    message.react("413948959908823041");
+    message.react("🇵");
+    message.react("🇪");
+    message.react("🇷");
+    message.react("🇮");
+    message.react("🇸");
+    message.react("🇭");
   }
 });
 
