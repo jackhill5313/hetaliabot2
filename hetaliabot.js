@@ -85,7 +85,7 @@ client.on("message", (message) => {
 
 client.on("message", (message) => {
 if (message.content.includes ('hewwo')) {
-    message.channel.send(":hell:");
+    message.react("417069737801940993");
   }
 });
 
