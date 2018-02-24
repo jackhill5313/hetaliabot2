@@ -99,8 +99,7 @@ client.on('message', async message => {
 		    await message.react("🇸");
 		    await message.react("🇭");
 	    } catch (error) {
-		    console.log(err)
-    }
+		    console.log(error) }
 };
 };
 });
