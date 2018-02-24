@@ -7,8 +7,8 @@ client.on("ready", () => {
   console.log("I am ready!");
 });
 
- client.on('message', async (message) => {
-    if(message.content.includes ('hewwo')){
+  client.on('message', async (message) => {
+    if(message.content.toLowerCase().includes ('hewwo')){
     try  {
         await message.react("413948959908823041");
         await message.react("🇵");
