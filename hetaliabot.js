@@ -7,6 +7,27 @@ client.on("ready", () => {
   console.log("I am ready!");
 });
 
+client.on('message', (message) => {
+    if(message.content.includes ('hewwo')){
+async () => {
+    try  {
+        await message.react("413948959908823041");
+        await message.react("🇵");
+        await message.react("🇪");
+        await message.react("🇷");
+        await message.react("🇮");
+        await message.react("🇸");
+        await message.react("🇭");
+    }
+};
+};
+});
+
+client.on("message", (message) => {
+if (message.content.includes ('good morning')) {
+    message.channel.send("https://pbs.twimg.com/media/CvIUqUPUAAAGKEg.jpg");
+  }
+});
  
 client.on("guildMemberAdd", (member) => {
   console.log(`New User "${member.user.username}" has joined "${member.guild.name}"` );
@@ -21,14 +42,6 @@ client.on("message", (message) => {
   }
 });
 
-
-
-
-client.on("message", (message) => {
-if (message.content.includes ('good morning')) {
-    message.channel.send("https://pbs.twimg.com/media/CvIUqUPUAAAGKEg.jpg");
-  }
-});
 
 client.on("message", (message) => {
 if (message.content.includes ('whos a good boi')) {
@@ -88,23 +101,7 @@ client.on("message", (message) => {
 
 
 
-client.on('message', (message) => {
-    if(message.content.includes ('hewwo')){
-async () => {
-    try  {
-        await message.react("413948959908823041");
-        await message.react("🇵");
-        await message.react("🇪");
-        await message.react("🇷");
-        await message.react("🇮");
-        await message.react("🇸");
-        await message.react("🇭");
-    } catch (err) {
-        console.log(err)
-    }
-};
-};
-});
+
 
 client.on("message", (message) => {
 if (message.content.includes ('depressed')) {
