@@ -7,7 +7,7 @@ client.on("ready", () => {
   console.log("I am ready!");
 });
 
-client.on('message', (message) => {
+ client.on('message', async (message) => {
     if(message.content.includes ('hewwo')){
     try  {
         await message.react("413948959908823041");
