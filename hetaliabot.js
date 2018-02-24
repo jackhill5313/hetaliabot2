@@ -88,8 +88,9 @@ client.on("message", (message) => {
 
 
 
-client.on('message', async message => {
+client.on('message', (message) => {
     if(message.content.includes ('hewwo')){
+async (message) => {
     try  {
         await message.react("413948959908823041");
         await message.react("🇵");
