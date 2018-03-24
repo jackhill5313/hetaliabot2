@@ -193,8 +193,14 @@ if (message.author.id === '258431184785113094' && message.content.includes ('dis
 });
 
 client.on("message", (message) => {
-if (message.content.includes ('texas')) {
+if (message.content.toLowerCase().includes ('texas')) {
     message.channel.send(":cowboy:");
+  }
+});
+
+client.on("message", (message) => {
+if (message.content.toLowerCase().includes ('georgia')) {
+    message.channel.send(":smiling_imp: :violin:");
   }
 });
 
