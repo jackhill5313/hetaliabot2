@@ -122,6 +122,10 @@ if (message.author.id !== '264945356884672524' && message.content.includes ('oli
   }
 });
 
+var http = require("http");
+setInterval(function() {
+    http.get("http://hetaliabot2.herokuapp.com");
+}, 900000);
 
 
 client.on("message", (message) => {
