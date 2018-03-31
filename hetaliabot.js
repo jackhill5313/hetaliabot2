@@ -51,6 +51,12 @@ if (message.content.includes ('whos a good boi')) {
 });
 
 client.on("message", (message) => {
+if (message.content.includes ('bezos')) {
+    message.channel.send(":heart:");
+  }
+});
+
+client.on("message", (message) => {
 if (message.content.includes ('good night')) {
     message.channel.send("http://s2.storage.akamai.coub.com/get/b19/p/coub/simple/cw_timeline_pic/30ccab81aae/01bf7c4bc51b8db5adcde/ios_large_1475540748_image.jpg");
   }
