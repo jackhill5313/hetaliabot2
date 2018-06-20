@@ -59,7 +59,7 @@ if (message.content.toLowerCase().includes ('bezos')) {
 client.on('message', message =>{
 	if (message.content.toLowerCase().includes ('romano bot') || message.content.toLowerCase().includes ('romanobot') || message.content.toLowerCase().includes ('romabot') || message.content.toLowerCase().includes ('roma bot')) {
 		var choices = ['yeah.. i owe him .3 BTC but i spent .1 BTC on mcdonalds last week so im a bit short... :thinking:','I sent him an IOU but I think he just deleted it..','I tried to pay him back in coupons to olive garden and he sent me malware','I know him!','i told him about pineapple pizza once... he gave me a glitch after that','Pizza, pasta, put it in a box-'];
-		var response = choices[Math.floor(Math.random()*6)];
+		var response = Math.floor(Math.random() * choices.length);
     message.channel.send(+response);
 	}
 });
