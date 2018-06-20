@@ -51,40 +51,16 @@ if (message.content.includes ('whos a good boi')) {
 });
 
 client.on("message", (message) => {
-if (message.content.toLowerCase().includes ('bezos') || message.content.toLowerCase().includes ('jeff')) {
+if (message.content.toLowerCase().includes ('bezos')) {
     message.channel.send(":heart:");
   }
 });
 
-client.on("message", (message) => {
-if (message.content.toLowerCase().includes ('romano bot')) {
-    message.channel.send("yeah i owe him .3 BTC but i spent .1 BTC on mcdonald's last week so i'm a bit short... :thinking");
-  }
-});
-
-client.on("message", (message) => {
-if (message.content.toLowerCase().includes ('roma bot')) {
-    message.channel.send("yeah i owe him .3 BTC but i spent .1 BTC on mcdonald's last week so i'm a bit short... :thinking:");
-  }
-});
-
-client.on("message", (message) => {
-if (message.content.toLowerCase().includes ('romanobot')) {
-    message.channel.send("I sent him an IOU but I think he just deleted it...");
-  }
-});
-
-client.on("message", (message) => {
-if (message.content.toLowerCase().includes ('romabot')) {
-    message.channel.send("I tried to pay him back in coupons to olive garden and he sent me malwar");
-  }
-});
-
 client.on('message', message =>{
-	if (message.content.toLowerCase().includes ('roll die')) {
-		var choices = ['1','2','3','4','5','6'];
+	if (message.content.toLowerCase().includes ('romano bot') || message.content.toLowerCase().includes ('romanobot') || message.content.toLowerCase().includes ('romabot') || message.content.toLowerCase().includes ('roma bot')) {
+		var choices = ['yeah.. i owe him .3 BTC but i spent .1 BTC on mcdonalds last week so im a bit short... :thinking:','I sent him an IOU but I think he just deleted it..','I tried to pay him back in coupons to olive garden and he sent me malware','I know him!','i told him about pineapple pizza once... he gave me a glitch after that','Pizza, pasta, put it in a box-'];
 		var response = choices[Math.floor(Math.random()*6)];
-    message.channel.send(' :sweat_drops:'+response);
+    message.channel.send(+response);
 	}
 });
 
