@@ -51,7 +51,7 @@ if (message.content.includes ('whos a good boi')) {
 });
 
 client.on("message", (message) => {
-if (message.content.toLowerCase().includes ('bezos')) || message.content.toLowerCase().includes ('jeff')) {
+if (message.content.toLowerCase().includes ('bezos') || message.content.toLowerCase().includes ('jeff')) {
     message.channel.send(":heart:");
   }
 });
