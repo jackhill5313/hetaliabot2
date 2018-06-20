@@ -51,9 +51,41 @@ if (message.content.includes ('whos a good boi')) {
 });
 
 client.on("message", (message) => {
-if (message.content.toLowerCase().includes ('bezos')) {
+if (message.content.toLowerCase().includes ('bezos','jeff')) {
     message.channel.send(":heart:");
   }
+});
+
+client.on("message", (message) => {
+if (message.content.toLowerCase().includes ('romano bot')) {
+    message.channel.send("yeah i owe him .3 BTC but i spent .1 BTC on mcdonald's last week so i'm a bit short... :thinking");
+  }
+});
+
+client.on("message", (message) => {
+if (message.content.toLowerCase().includes ('roma bot')) {
+    message.channel.send("yeah i owe him .3 BTC but i spent .1 BTC on mcdonald's last week so i'm a bit short... :thinking:");
+  }
+});
+
+client.on("message", (message) => {
+if (message.content.toLowerCase().includes ('romanobot')) {
+    message.channel.send("I sent him an IOU but I think he just deleted it...");
+  }
+});
+
+client.on("message", (message) => {
+if (message.content.toLowerCase().includes ('romabot')) {
+    message.channel.send("I tried to pay him back in coupons to olive garden and he sent me malwar");
+  }
+});
+
+client.on('message', message =>{
+	if (message.content.toLowerCase().includes ('roll die')) {
+		var choices = ['1','2','3','4','5','6'];
+		var response = choices[Math.floor(Math.random()*6)];
+    message.channel.send(' :sweat_drops:'+response);
+	}
 });
 
 client.on("message", (message) => {
