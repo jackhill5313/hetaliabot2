@@ -71,6 +71,13 @@ if (message.content.includes ('good night')) {
 });
 
 client.on("message", (message) => {
+if (message.content.toLowerCase().includes ('alfred, whats one of the most terrifying things youve seen here on the internet?')) {
+    message.channel.send("https://cdn.discordapp.com/attachments/265571232185843723/462644008020213760/unknown.png");
+  }
+});
+
+
+client.on("message", (message) => {
 if (message.content.includes ('goodnight')) {
     message.channel.send("http://s2.storage.akamai.coub.com/get/b19/p/coub/simple/cw_timeline_pic/30ccab81aae/01bf7c4bc51b8db5adcde/ios_large_1475540748_image.jpg");
   }
