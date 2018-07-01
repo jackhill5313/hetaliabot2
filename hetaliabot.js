@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-let prefix = "!"
+
 
 
 
@@ -285,13 +285,12 @@ client.on('message', message =>{
 	}
 });
 
-client.on("message", message => {
-const args = msg.content.slice(prefix.length).trim().split(/ +/g); 
-const command = args.shift().toLowerCase();
-    if (command === dm || message.author.bot) {
+client.on("message", (message => {
+    if (!message.content.startsWith('dm') || message.author.bot) return;
+    const args = message.content.split(' ');
     const taggedUser = message.mentions.users.first();
-    taggedUser.send('${args[0]}');
-}});
+    taggedUser.send('${args.slice[2]}');
+}));
 	  
 	
 	
