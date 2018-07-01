@@ -286,7 +286,7 @@ client.on('message', message =>{
 });
 
 client.on("message", (message => {
-    if (!message.content.startsWith('!dm') || message.author.bot) return;
+    if (command === dm || message.author.bot) return;
 const args = msg.content.slice(prefix.length).trim().split(/ +/g); 
 const command = args.shift().toLowerCase();
     const taggedUser = message.mentions.users.first();
