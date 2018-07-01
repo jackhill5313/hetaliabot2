@@ -286,9 +286,9 @@ client.on('message', message =>{
 });
 
 client.on("message", (message => {
-    if (command === dm || message.author.bot) return;
 const args = msg.content.slice(prefix.length).trim().split(/ +/g); 
 const command = args.shift().toLowerCase();
+    if (command === dm || message.author.bot) return;
     const taggedUser = message.mentions.users.first();
     taggedUser.send('${args[0]}');
 }));
