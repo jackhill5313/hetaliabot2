@@ -288,7 +288,7 @@ client.on("message", (message => {
     if (!message.content.startsWith('!dm') || message.author.bot) return;
     const args = message.content.split(' ');
     const taggedUser = message.mentions.users.first();
-    taggedUser.send('<content>');
+    taggedUser.send(message.content);
 }));
 	  
 
