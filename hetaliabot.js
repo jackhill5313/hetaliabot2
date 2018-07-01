@@ -96,13 +96,13 @@ if (message.content.startsWith ('asl')) {
 });
 
 client.on("message", (message)=>{
-    if (message.channel.type.toLowerCase() == 'dm' || message.channel.type.toLowerCase() == 'group') {
+    if (message.channel.type == 'dm' || message.channel.type == 'group') {
         var embed = new Discord.RichEmbed()
         .setAuthor(message.author.username, message.author.avatarURL)
         .setDescription(message.content)
         .setTimestamp(new Date())
         .setColor('#C735D4');
-        client.channels.get("<276351839312805888>").send(embed);
+        client.channels.get("276351839312805888").send(embed);
     }
 });
 
