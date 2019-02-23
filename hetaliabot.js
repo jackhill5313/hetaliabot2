@@ -33,7 +33,7 @@ if (message.content.includes ('good morning')) {
  
 client.on("guildMemberAdd", (member) => {
   console.log(`New User "${member.user.username}" has joined "${member.guild.name}"` );
-  member.guild.channels.get('name', 'rules_and_entry').send(`Welcome,"${member.user.username}"! Read the rules to enter! 💖`);
+  member.guild.channels.get('name', 'rules_and_entry').sendMessage(`Welcome,"${member.user.username}"! Read the rules to enter! 💖`);
 });
 
 client.on("message", (message) => {
