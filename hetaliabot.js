@@ -12,7 +12,7 @@ client.on("ready", () => {
   client.on('message', async (message) => {
     if(message.content.toLowerCase().includes ('hewwo')){
     try  {
-        await message.react("413948959908823041");
+        await message.react("603741475033055252");
         await message.react("🇵");
         await message.react("🇪");
         await message.react("🇷");
