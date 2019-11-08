@@ -51,11 +51,7 @@ if (message.content.includes ('whos a good boi')) {
   }
 });
 
-client.on("message", (message) => {
-if (message.content.toLowerCase().includes ('bezos')) {
-    message.channel.send(":heart:");
-  }
-});
+
 
 client.on('message', message =>{
 	if (message.content.toLowerCase().includes ('romano bot') || message.content.toLowerCase().includes ('romanobot') || message.content.toLowerCase().includes ('romabot') || message.content.toLowerCase().includes ('roma bot')) {
