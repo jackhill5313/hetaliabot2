@@ -186,6 +186,18 @@ if (message.author.id !== '264945356884672524' && message.content.includes ('all
   }
 });
 
+client.on("message", (message) => {
+if (message.author.id !== '317540893282271234' && message.content.includes ('luxembourg')) {
+    client.users.get("317540893282271234").sendMessage("lux mention");
+  }
+});
+
+client.on("message", (message) => {
+if (message.author.id !== '317540893282271234' && message.content.includes ('lux')) {
+    client.users.get("317540893282271234").sendMessage("lux mention");
+  }
+});
+
 
 client.on("message", (message) => {
 if (message.content.includes ('good boi') && message.content.includes ('al')) {
