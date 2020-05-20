@@ -6,7 +6,7 @@ const client = new Discord.Client();
 
 client.on("ready", () => {
   console.log("I am ready!");
-	client.user.setActivity('YouTube', { type: 'WATCHING' });
+	client.user.setActivity('hetalia.net', { type: 'WATCHING' });
 });
 
   client.on('message', async (message) => {
