@@ -39,8 +39,8 @@ client.on("guildMemberAdd", (member) => {
 client.on("message", (message) => {
   if (message.content.startsWith("ping")) {
     message.channel.send("pong!");
-  }else if(message.content.startsWith("dong")){
-   message.channel.send("long :eyes:"); 
+  }else if(message.content.startsWith("florida")){
+   message.channel.send(":crocodile: :palm_tree:"); 
   }
 });
 
