@@ -6,7 +6,7 @@ const client = new Discord.Client();
 
 client.on("ready", () => {
   console.log("I am ready!");
-	client.user.setActivity('hetalia.net', { type: 'WATCHING' });
+	client.user.setActivity('Hetalia World Stars', { type: 'WATCHING' });
 });
 
   client.on('message', async (message) => {
@@ -219,17 +219,7 @@ if (message.content.includes ('veggie burgers')) {
   }
 });
 
-client.on("message", (message) => {
-if (message.author.id === '258431184785113094' && message.content.includes ('gross')) {
-    message.channel.send("I LOVE YOU SO MUCH AL AND I BELIEVE IN YOU!!!");
-  }
-});
 
-client.on("message", (message) => {
-if (message.author.id === '258431184785113094' && message.content.includes ('disgusting')) {
-    message.channel.send("I LOVE YOU SO MUCH AL AND I BELIEVE IN YOU!!!");
-  }
-});
 
 client.on("message", (message) => {
 if (message.content.toLowerCase().includes ('texas')) {
@@ -240,6 +230,12 @@ if (message.content.toLowerCase().includes ('texas')) {
 client.on("message", (message) => {
 if (message.content.toLowerCase().includes ('georgia')) {
     message.channel.send(":smiling_imp: :violin:");
+  }
+});
+
+client.on("message", (message) => {
+if (message.content.toLowerCase().includes ('new jersey')) {
+    message.channel.send(":blueberries:");
   }
 });
 
