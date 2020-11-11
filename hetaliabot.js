@@ -18,14 +18,14 @@ client.on("message", message => {
       
       member.roles.add(role)
         
-        let channel = message.guild.channels.cache.find("lobby")
+        let channel = message.guild.channels.find("lobby")
            
 
             let embed100 = new MessageEmbed()
                 .setAuthor(`${message.author.id} has joined the server! Make sure to fill out an #intro and get some #roles whenever!`)
 		
 
-            var sChannel = message.guild.channels.cache.get(channel)
+            var sChannel = message.guild.channels.get(channel)
             if (!sChannel) return;
             sChannel.send(embed100)
       }
