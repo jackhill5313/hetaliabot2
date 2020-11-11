@@ -32,7 +32,7 @@ client.on("message", message => {
       channel.id === "265571754393468928"
   );
 
-        channel.send`<@${message.author.id}> has been verified`)
+        channel.send`<@${message.author.id}> just joined the discord! Make sure to fill out an #intro and get some #roles whenever!`)
         
       }
     }
