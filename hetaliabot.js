@@ -6,7 +6,7 @@ client.on("ready", () => {
 	client.user.setActivity('Youtube', { type: 'WATCHING' });
 });
 
-client.on(guildMemberUpdate, (oldMember, newMember) => { 
+client.on('guildMemberUpdate', (oldMember, newMember) => { 
         const channel = member.guild.channels.find(channel => channel.name === "lobby");
             if (!oldMember.roles.cache.has('265569526781968384') && newMember.roles.cache.has('265569526781968384'));
         if(!channel) return;
