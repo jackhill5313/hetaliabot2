@@ -14,18 +14,18 @@ client.on("message", message => {
       
       if (message.channel.name === "entry") {
       let member = message.author;
-      let role = message.guild.roles.find(r => r.name === "newts");
+      let role = message.guild.roles.cache.find(r => r.name === "newts");
       
       member.roles.add(role)
         
-        let channel = message.guild.channels.find("lobby")
+        let channel = message.guild.channels.cache.find("lobby")
            
 
             let embed100 = new MessageEmbed()
                 .setAuthor(`${message.author.id} has joined the server! Make sure to fill out an #intro and get some #roles whenever!`)
 		
 
-            var sChannel = message.guild.channels.get(channel)
+            var sChannel = message.guild.channels.cache.get(channel)
             if (!sChannel) return;
             sChannel.send(embed100)
       }
@@ -52,11 +52,6 @@ client.on("message", message => {
         console.log(err)
     }
 };
-});
-
-client.on("guildMemberAdd", (member) => {
-  console.log(`New User "${member.user.username}" has joined "${member.guild.name}"` );
-  member.guild.channels.get('name', 'entry').sendMessage(`Welcome,"${member.user.username}"! Read the rules to enter! 💖`);
 });
 
 client.on("message", (message) => {
