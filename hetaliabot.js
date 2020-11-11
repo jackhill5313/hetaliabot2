@@ -10,7 +10,6 @@ client.on(guildMemberUpdate, (oldMember, newMember) => {
         .setColor(blue)
         .setTitle('Welcome!')
         .setDescription(`${member} just joined the discord! Make sure to fill out an #intro and get some #roles whenever!`)
-        .setThumbnail(message.user.avatarURL)
         .setFooter('PM PierreBot with any questions!')
         .setTimestamp();
 
