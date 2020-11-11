@@ -7,7 +7,20 @@ client.on("ready", () => {
 });
 
 
+client.on(guildMemberUpdate, (oldMember, newMember) => { 
+        const channel = member.guild.channels.find(channel => channel.name === "lobby");
+            if (!oldMember.roles.cache.has('265569526781968384') && newMember.roles.cache.has('265569526781968384'));
+        if(!channel) return;
+    
+    const welcomeEmbed = new Discord.MessageEmbed()
+        .setColor('#7ba3ff')
+        .setTitle('Welcome!')
+        .setDescription(`${member} just joined the discord! Make sure to fill out an #intro and get some #roles whenever!`)
+        .setFooter('PM PierreBot with any questions!')
+        .setTimestamp();
 
+    channel.send(welcomeEmbed);
+});
 
   client.on('message', async (message) => {
     if(message.content.toLowerCase().includes ('hewwo')){
