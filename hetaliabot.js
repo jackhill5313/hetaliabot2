@@ -1,12 +1,28 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 
+client.on(guildMemberUpdate, (oldMember, newMember) 
+        const channel = member.guild.channels.find(channel => channel.name === "lobby");
+        if (oldMember.roles.cache.size !== newMember.roles.cache.size) {
+            if (!oldMember.roles.cache.has('roleID') && newMember.roles.cache.has('roleID'))
+        if(!channel) return;
+	
+	const welcomeEmbed = new Discord.MessageEmbed()
+        .setColor(blue)
+        .setTitle('Welcome!')
+        .setDescription(`${member} just joined the discord! Make sure to fill out an #intro and get some #roles whenever!`)
+        .setThumbnail(message.user.avatarURL)
+        .setFooter('PM PierreBot with any questions!')
+        .setTimestamp();
+
+    channel.send(welcomeEmbed);
+});
 
 
 
 client.on("ready", () => {
   console.log("I am ready!");
-	client.user.setActivity('Hetalia World Stars', { type: 'WATCHING' });
+	client.user.setActivity('Youtube', { type: 'WATCHING' });
 });
 
   client.on('message', async (message) => {
