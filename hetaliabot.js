@@ -6,18 +6,24 @@ client.on("ready", () => {
 	client.user.setActivity('Youtube', { type: 'WATCHING' });
 });
 
-client.on('guildMemberUpdate', (oldMember, newMember) => { 
-        const channel = newMember.guild.channels.cache.find(channel => channel.name === "lobby");
-            if (!oldMember.roles.cache.has('265569526781968384') && newMember.roles.cache.has('265569526781968384'));
-        if(!channel) return;
-	
-	const welcomeEmbed = new Discord.MessageEmbed()
+const ROLE_ID = '265569526781968384';
+const CHANNEL_ID = '265571754393468928';
+
+client.on('guildMemberUpdate', async (oldMember, newMember) => {
+    const member = await newMember.fetch();
+    
+    if (oldMember.roles.cache.has(ROLE_ID) || !member.roles.cache.has(ROLE_ID))
+        return;
+        
+    const channel = guild.channels.cache.get(CHANNEL_ID) || await guild.channels.fetch(CHANNEL_ID);
+    
+    const welcomeEmbed = new Discord.MessageEmbed()
         .setColor('#7ba3ff')
         .setTitle('Welcome!')
         .setDescription(`${newMember} just joined the discord! Make sure to fill out an #intro and get some #roles whenever!`)
         .setFooter('PM PierreBot with any questions!')
         .setTimestamp();
-
+        
     channel.send(welcomeEmbed);
 });
 
