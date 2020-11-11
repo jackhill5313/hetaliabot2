@@ -2,15 +2,12 @@
   "name": "HetaliaBot",
   "description": "HetaliaBot",
   "version": "1.0.0",
-  "engines": {
-    "node": "14.x"
-  }
   "main": "hetaliabot.js",
   "scripts": {
     "start": "node hetaliabot.js"
   },
   "dependencies": {
-    "discord.js": "^12.4.1",
+    "discord.js": "11.3.0",
     "request": "2.81.0"
   }
 }
