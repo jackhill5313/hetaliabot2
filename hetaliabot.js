@@ -6,25 +6,23 @@ client.on("ready", () => {
 	client.user.setActivity('Hetalia: World Stars', { type: 'WATCHING' });
 });
 
-const ROLE_ID = '265569526781968384';
-const CHANNEL_ID = '265571754393468928';
+client.on("guildMemberUpdate", async (oldMember, newMember) => {
 
-client.on('guildMemberUpdate', async (oldMember, newMember) => {
-    console.log('Event executed');
-    const member = await newMember.fetch();
+  if (!oldMember.roles.cache.equals(newMember.roles.cache)) {
 
-    console.log('Member Fetched | ', oldMember.roles.cache.has(ROLE_ID), member.roles.caches.has(ROLE_ID));
+    let newRole;
+    newMember.roles.cache.forEach((role) => {
+      if (oldMember.roles.cache.includes(role)) return;
 
-    if (oldMember.roles.cache.has(ROLE_ID) || !member.roles.cache.has(ROLE_ID))
-        return;
-
-    console.log('Everything checks out');
-
-    const channel = guild.channels.cache.get(CHANNEL_ID) || await guild.channels.fetch(CHANNEL_ID);
-
-    console.log('Channel fetched');
-
-    const welcomeEmbed = new Discord.MessageEmbed()
+      let roleNames = ["newts"];
+      if (roleNames.toLowerCase().includes(role.name.toLowerCase())) {
+        newRole = role;
+      }
+    });
+    const channel = oldMember.guild.channels.cache.find(
+      (channel) => channel.name === "lobby"
+    );
+ const welcomeEmbed = new Discord.MessageEmbed()
         .setColor('#7ba3ff')
         .setTitle('Welcome!')
         .setDescription(`${newMember} just joined the discord! Make sure to fill out an #intro and get some #roles whenever!`)
@@ -32,9 +30,13 @@ client.on('guildMemberUpdate', async (oldMember, newMember) => {
         .setTimestamp();
 
     channel.send(welcomeEmbed);
-
-    console.log('Sent');
+  
+  }
+	
 });
+
+    
+
 
 // THIS IS ALL PING PONG STUFF DOWN HERE
 
