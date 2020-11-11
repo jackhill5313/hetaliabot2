@@ -12,7 +12,7 @@ client.on('guildMemberUpdate', (oldMember, newMember) => {
         if(!channel) return;
 	
 	const welcomeEmbed = new Discord.MessageEmbed()
-        .setColor(blue)
+        .setColor('#7ba3ff')
         .setTitle('Welcome!')
         .setDescription(`${member} just joined the discord! Make sure to fill out an #intro and get some #roles whenever!`)
         .setFooter('PM PierreBot with any questions!')
