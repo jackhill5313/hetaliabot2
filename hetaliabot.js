@@ -21,9 +21,13 @@ client.on("message", message => {
         let channel = message.guild.channels.cache.find("lobby")
            
 
-            let embed100 = new MessageEmbed()
-                .setAuthor(`${message.author.id} has joined the server! Make sure to fill out an #intro and get some #roles whenever!`)
-		
+            let embed100 = new Discord.MessageEmbed()
+		.setColor('#7ba3ff')
+        	.setTitle('Welcome!')
+        	.setDescription(`${message.author.id} just joined the discord! Make sure to fill out an #intro and get some #roles whenever!`)
+        	.setFooter('PM PierreBot with any questions!')
+        	.setTimestamp();
+
 
             var sChannel = message.guild.channels.cache.get(channel)
             if (!sChannel) return;
