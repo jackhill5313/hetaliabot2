@@ -32,7 +32,7 @@ client.on("message", message => {
       channel.id === "265571754393468928"
   );
 
-        channel.send(`${message.author.tag} has been verified`)
+        channel.send`<@${message.author.id}> has been verified`)
         
       }
     }
