@@ -1,10 +1,9 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 
-client.on(guildMemberUpdate, (oldMember, newMember) 
+client.on(guildMemberUpdate, (oldMember, newMember) => { 
         const channel = member.guild.channels.find(channel => channel.name === "lobby");
-        if (oldMember.roles.cache.size !== newMember.roles.cache.size) {
-            if (!oldMember.roles.cache.has('roleID') && newMember.roles.cache.has('roleID'))
+            if (!oldMember.roles.cache.has('265569526781968384') && newMember.roles.cache.has('265569526781968384'));
         if(!channel) return;
 	
 	const welcomeEmbed = new Discord.MessageEmbed()
