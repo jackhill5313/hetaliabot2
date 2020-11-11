@@ -1,6 +1,11 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 
+client.on("ready", () => {
+  console.log("I am ready!");
+	client.user.setActivity('Youtube', { type: 'WATCHING' });
+});
+
 client.on(guildMemberUpdate, (oldMember, newMember) => { 
         const channel = member.guild.channels.find(channel => channel.name === "lobby");
             if (!oldMember.roles.cache.has('265569526781968384') && newMember.roles.cache.has('265569526781968384'));
@@ -16,12 +21,6 @@ client.on(guildMemberUpdate, (oldMember, newMember) => {
     channel.send(welcomeEmbed);
 });
 
-
-
-client.on("ready", () => {
-  console.log("I am ready!");
-	client.user.setActivity('Youtube', { type: 'WATCHING' });
-});
 
   client.on('message', async (message) => {
     if(message.content.toLowerCase().includes ('hewwo')){
