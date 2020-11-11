@@ -3,7 +3,7 @@ const client = new Discord.Client();
 
 client.on("ready", () => {
   console.log("I am ready!");
-	client.user.setActivity('Youtube', { type: 'WATCHING' });
+	client.user.setActivity('Hetalia: World Stars', { type: 'WATCHING' });
 });
 
 const ROLE_ID = '265569526781968384';
@@ -193,10 +193,6 @@ client.on("message", (message) => {
 if (message.content.toLowerCase().includes ('new jersey')) {
     message.channel.send(":blueberries:");
   }
-
-if (message.content.toLowerCase().includes ('texas')) {
-      message.channel.send(":cowboy:");
-    }
 
   if (message.content.toLowerCase().includes ('georgia')) {
       message.channel.send(":smiling_imp: :violin:");
