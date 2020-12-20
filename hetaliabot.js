@@ -77,11 +77,6 @@ client.on("message", message => {
     message.channel.send("https://pbs.twimg.com/media/CvIUqUPUAAAGKEg.jpg");
   }
 
-  if (message.content.includes("good night")) {
-    message.channel.send(
-      "http://s2.storage.akamai.coub.com/get/b19/p/coub/simple/cw_timeline_pic/30ccab81aae/01bf7c4bc51b8db5adcde/ios_large_1475540748_image.jpg"
-    );
-  }
 
   if (
     message.content
